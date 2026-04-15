@@ -89,11 +89,11 @@ class BayesClassifier:
         # those tokens. We've asked you to write a function `update_dict` that will make
         # your life easier here. Write that function first then pass it your list of
         # tokens from the file and the appropriate dictionary
-        words = self.tokenize(text)
-        if filename.startswith(self.pos_file_prefix):
-            self.update_dict(words, self.pos_freqs)
-        elif filename.startswith(self.neg_file_prefix):
-            self.update_dict(words, self.neg_freqs)
+            words = self.tokenize(text)
+            if filename.startswith(self.pos_file_prefix):
+                self.update_dict(words, self.pos_freqs)
+            elif filename.startswith(self.neg_file_prefix):
+                self.update_dict(words, self.neg_freqs)
 
         # for debugging purposes, it might be useful to print out the tokens and their
         # frequencies for both the positive and negative dictionaries
@@ -168,6 +168,7 @@ class BayesClassifier:
             return "positive"
         else:
             return "negative"
+        
         
     def load_file(self, filepath: str) -> str:
         """Loads text of given file
@@ -253,7 +254,6 @@ class BayesClassifier:
                 freqs[word] += 1
             else:
                 freqs[word] = 1
-        # remove this line once you've implemented this method
 
 
 if __name__ == "__main__":
@@ -285,7 +285,7 @@ if __name__ == "__main__":
     print(f"count for the word 'computer' in negative dictionary {b.neg_freqs['computer']}")
     print(f"count for the word 'science' in positive dictionary {b.pos_freqs['science']}")
     print(f"count for the word 'science' in negative dictionary {b.neg_freqs['science']}")
-    print(f"count for the word 'i' in positive dictionary {b.pos_freqs['i']}")
+    print(f"count for the word 'i' in positive dictionary {b.pos_freqs['i']}") 
     print(f"count for the word 'i' in negative dictionary {b.neg_freqs['i']}")
     print(f"count for the word 'is' in positive dictionary {b.pos_freqs['is']}")
     print(f"count for the word 'is' in negative dictionary {b.neg_freqs['is']}")
