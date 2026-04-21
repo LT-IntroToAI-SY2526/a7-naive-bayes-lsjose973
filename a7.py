@@ -164,6 +164,9 @@ class BayesClassifier:
         # larger)
         # return a string of "positive" or "negative"
 
+        print(f"Positive Probability: {prob_pos}")
+        print(f"Negative Proability {prob_neg}")
+
         if prob_pos > prob_neg:
             return "positive"
         else:
@@ -305,3 +308,14 @@ if __name__ == "__main__":
     print("\nThe following should all be negative.")
     print(b.classify('rainy days are the worst'))
     print(b.classify('computer science is terrible'))
+    print("\nThe following is to test out the method with each groups responses")
+    print(b.classify("Summer break is almost here.  I am super excited and I know that it's going to be the best"))
+    print(b.classify("I studied hard for my AP exams and I’m very confident that I will score high."))
+    print(b.classify("I’m looking forward to hanging out with my friends after school"))
+    print(b.classify("I am nervous that I won't do well on the AP tests.  I have studied, but I don't think I'll do that well"))
+    print(b.classify("“I really don’t want to go to work after school because I am very tired."))
+    print(b.classify("“I went to the store but I was disappointed because they didn’t have my favorite snack"))
+    print(b.classify("Quick service & very trustworthy. Worked with Tom Nolan on a quick fix on my mirror. He was very knowledgeable about potential issues before getting into it & was able to get it fixed very quickly. I would trust them with any future repairs, I would not take my car anywhere else."))
+    print(b.classify("Took care of my insurance needs. Looked for the best rates. Best insurance agent by far. Honest and trustworthy. Thank you Gil. We appreciate your hard work! Highly recommend!"))
+    print(b.classify("Last year I loved the delightful indie zombie Christmas musical Anna and the Apocalypse. It was creative, funny and sweet. It even made Best Films of 2018. So when I saw a trailer for The Dead Don’t Die I got very excited. The trailer was hilarious, and I love the cast. My hope was it was going to be a Wes Anderson meets Zombieland film. Unfortunately I was very disappointed. The Dead Don’t Die was an unfunny, self-indulgent, frustrating experience. The cast is woefully wasted, and they strain for the few laughs the script offers. The metaphors are also rammed in to the ground by narrators and characters breaking the 4th wall. It is my first film from director Jim Jarmusch but the critics at Cannes and other places don’t seem to be enjoying it either, so it appears to be a just a big miss. It’s frustrating because it had so much potential and it all falls flat."))
+    print(b.classify("In recent years Hollywood has produced several popular comedic films starring and geared towards women. Whether it is the Bad Moms movies, Girl’s Trip or Bridesmaids these films have an audience. Unfortunately the successes for that audience are few and far between. In the latest from Netflix, Wine Country, a lot of funny women are brought together for little to no laughs. It boggles my mind that so many talented people like Amy Poehler, Maya Rudolph, Rachel Dratch, Ana Gasteyer and more could all get together and produce so few jokes. It felt like an R rated version of a sitcom episode stretched into nearly 2 hours. I also am so tired of the trope that women doing raunchy or outlandish things is inherently more funny than when a man does the same things. It’s so lazy and that’s how I would describe Wine Country. Buyer beware!"))
